@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Font Awsome for Social Media Icons-->
+    <script src="https://kit.fontawesome.com/0e4449550a.js" crossorigin="anonymous"></script>
+
+    <!-- For Smooth Transition -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <!-- Start of Navigation Bar -->
+    <div class="navBar-container">
+        <nav class="navBar">
+            <a href="#secOne"><h1 class="logo"><font color="#262626">Know your BMI!</font></h1></a>
+           
+
+            <div class="menuIcon" id="menuButton">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+            <ul class="navbarMenu">
+                <li><a class="mediaLinks" href="#secTwo">How to Calculate BMI?</a></li>
+                <li><a class="mediaLinks" href="#secThree">BMI Classification</a></li>
+                <div class="buttons">
+                    <li><a class="mediaLinks" id="signinBtn" href="#">Sign in</a></li>
+                    <li><a class="mediaLinks" id="signupBtn" href="#">Sign up</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <!-- End of Navigation Bar -->
+
+    <!-- Start of Section 1 -->
+    <div class="sectionOne" id="secOne">
+        <div class="contentOne" data-aos="fade-right">
+            <h1 class="headingOne">What is Body mass index?</h1>
+            <p class="paragraphOne">Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in meters.</p>
+        </div>
+        <div class="contentTwo" data-aos="fade-up">
+            <h1 class="headingTwo">BMI Calculator</h1>
+            <p class="paragraphTwo">Height:<input class="inputOne" id="height" type="number" placeholder="Meter Ex. 1.75"></p>
+            <p class="paragraphThree">Weight:<input class="inputTwo" id="weight" type="number" placeholder="Kilogram Ex. 60"></p>
+            <div class="bmiButtons">
+                <button class="calculateBtn" id="calculateButton">Calculate</button>
+                <button class="resetBtn" id="resetButton">Reset</button>
+            </div>
+            <p class="outputOne">BMI: <span id="bmi"></span></p>
+            <p class="outputTwo">Category: <span id="category"></span></p>
+        </div>
+        
+    </div>
+    <!-- End of Section 1 -->
+
+    <!-- Start of Section 2 -->
+    <div class="sectionTwo" id="secTwo">
+        <h1 class="headingThree" data-aos="fade-right">How is BMI Calculated?</h1>
+        <p class="paragraphFour" data-aos="fade-right">BMI is calculated the same way for both adults and children. The calculation is based on the following formulas:</p>
+        <table class="tableOne" data-aos="fade-up">
+            <thead class="theadOne">
+                <tr>
+                    <th>Measurement Units</th>
+                    <th>Formula and Calculations</th>
+                </tr>
+            </thead>
+            
+            <tbody class="tbodyOne">
+                <tr>
+                    <td>Kilograms and meters (or centimeters).</td>
+                    <td>Formula: weight (kg) / [height (m)]2 With the metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to obtain height in meters. Example: Weight = 68 kg, Height = 165 cm (1.65 m) Calculation: 68 ÷ (1.65)2 = 24.98</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End of Section 2 -->
+
+    <!-- Start of Section 3 -->
+    <div class="sectionThree" id="secThree" data-aos="fade-right">
+        <table class="tableTwo">
+            <thead class="theadTwo">
+                <tr>
+                    <th>Classification</th>
+                    <th>BMI</th>
+                    <th>Risk of co-morbidities</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbodyTwo">
+                <tr class="row1">
+                    <td>Underaweight</td>
+                    <td>Below 18.5</td>
+                    <td>Low</td>
+                </tr>
+                <tr class="row2">
+                    <td>Normal</td>
+                    <td>18.5 to 24.9</td>
+                    <td>Average</td>
+                </tr>
+                <tr class="row3">
+                    <td>Overweight</td>
+                    <td>25 to 29.9</td>
+                    <td>Increased</td>
+                </tr>
+                <tr class="row4">
+                    <td>Obese</td>
+                    <td>30 to 34.9</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr class="row5">
+                    <td>Extremely Obese</td>
+                    <td>Above 35</td>
+                    <td>Severe</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End of Section 3 -->
+
+    <!-- Start of Footer -->
+	<hr>
+	<div class="footer">
+		<h1 class="footerName">JC Jacobe</h1>
+
+		<div class="socmedLinksFooter">
+			<a href="https://www.facebook.com/akosijcjacobe" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://twitter.com/JCJacobe2" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.instagram.com/jcjacobe2/" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://github.com/JCJ02" target="_blank"><i class="fab fa-github"></i></a>
+		</div>
+	</div>
+	<!-- End of Footer -->
+
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+    <!-- Start of Smooth Transition -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({
+        duration: 1000
+    });</script>
+    <!-- End of Smooth Transition -->
+    
+</body>
+</html>
